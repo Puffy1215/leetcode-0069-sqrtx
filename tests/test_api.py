@@ -2,7 +2,7 @@
 
 import pytest
 
-from leetcode-0069-sqrtx import api
+from leetcode_0069_sqrtx import api
 
 
 @pytest.mark.parametrize(
