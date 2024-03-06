@@ -12,7 +12,7 @@ from leetcode_0069_sqrtx import api
         [2, 8],
     ),
 )
-def test_sqrtx(result, x) -> None:
+def test_sqrtx(result: int, x: int) -> None:
     """Tests solution for problem Sqrt(x)"""
 
     assert api.sqrtx(x) == result
