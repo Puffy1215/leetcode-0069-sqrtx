@@ -6,13 +6,13 @@ from leetcode_0069_sqrtx import api
 
 
 @pytest.mark.parametrize(
-    ["result", ...],
+    ["result", "x"],
     (
-        [..., ...],
-        [..., ...],
-    )
+        [2, 4],
+        [2, 8],
+    ),
 )
-def test_sqrtx(result, ...) -> None
+def test_sqrtx(result, x) -> None:
     """Tests solution for problem Sqrt(x)"""
 
-    assert api.sqrtx(...) == result
+    assert api.sqrtx(x) == result
