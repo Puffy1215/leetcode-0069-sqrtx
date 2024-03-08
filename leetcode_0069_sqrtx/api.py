@@ -1,8 +1,11 @@
 """API for solving problem Sqrt(x)"""
 
+X_MAX = 2**31 - 1
+X_MIN = 0
+
 
 def _check_preconditions(x: int) -> bool:
-    pass
+    return X_MIN <= x <= X_MAX
 
 
 def sqrtx(x: int) -> int:
