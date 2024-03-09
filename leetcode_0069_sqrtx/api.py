@@ -24,11 +24,11 @@ def sqrtx(x: int) -> int:
     lower = 0
     upper = x
 
-    while upper != lower:
+    while upper - lower > 1:
         middle = (upper + lower) / 2
         if x < middle * middle:
-            upper = floor(middle)
+            upper = ceil(middle)
         else:
-            lower = ceil(middle)
+            lower = floor(middle)
 
     return lower
