@@ -1,5 +1,7 @@
 """API for solving problem Sqrt(x)"""
 
+from math import ceil, floor
+
 X_MAX = 2**31 - 1
 X_MIN = 0
 
@@ -19,4 +21,14 @@ def sqrtx(x: int) -> int:
 
     assert _check_preconditions(x)
 
-    pass
+    lower = 0
+    upper = x
+
+    while upper != lower:
+        middle = (upper + lower) / 2
+        if x < middle * middle:
+            upper = floor(middle)
+        else:
+            lower = ceil(middle)
+
+    return lower
