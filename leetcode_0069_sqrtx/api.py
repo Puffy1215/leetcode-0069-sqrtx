@@ -5,7 +5,13 @@ X_MIN = 0
 
 
 def _check_preconditions(x: int) -> bool:
-    return X_MIN <= x <= X_MAX
+    if x < 0:
+        return False
+
+    if X_MIN <= x <= X_MAX:
+        return False
+
+    return True
 
 
 def sqrtx(x: int) -> int:
