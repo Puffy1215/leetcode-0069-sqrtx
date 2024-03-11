@@ -21,6 +21,9 @@ def sqrtx(x: int) -> int:
 
     assert _check_preconditions(x)
 
+    if x in [0, 1]:
+        return x
+
     lower = 0
     upper = x
 
