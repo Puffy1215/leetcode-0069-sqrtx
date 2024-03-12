@@ -26,6 +26,8 @@ def test_sqrtx(result: int, x: int) -> None:
 
 @pytest.fixture
 def x_rand():
+    """Fixture to generate random x"""
+
     def _x_rand():
         return random.randint(api.X_MIN, api.X_MAX)
 
