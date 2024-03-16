@@ -1,6 +1,7 @@
 """Tests API for solving problem Sqrt(x)"""
 
 import random
+from math import floor, sqrt
 from typing import Callable
 
 import pytest
@@ -33,3 +34,12 @@ def x_rand() -> Callable[[], int]:
         return random.randint(api.X_MIN, api.X_MAX)
 
     return _x_rand
+
+
+def test_sqrtx_rand(x_rand) -> None:
+    """Tests solution for problem Sqrt(x) with random x"""
+
+    x = x_rand()
+    result = floor(sqrt(x))
+
+    test_sqrtx(result, x)
