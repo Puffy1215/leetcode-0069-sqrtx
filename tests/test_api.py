@@ -36,8 +36,11 @@ def x_rand() -> Callable[[], int]:
     return _x_rand
 
 
-def test_sqrtx_rand(x_rand) -> None:
+@pytest.mark.parametrize("run_count", range(10))
+def test_sqrtx_rand(run_count, x_rand) -> None:
     """Tests solution for problem Sqrt(x) with random x"""
+
+    random.seed(run_count)
 
     x = x_rand()
     result = floor(sqrt(x))
