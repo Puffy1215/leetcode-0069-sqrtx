@@ -37,7 +37,10 @@ def x_rand() -> Callable[[], int]:
 
 
 @pytest.mark.parametrize("run_count", range(10))
-def test_sqrtx_rand(run_count: int, x_rand: Callable[[], int]) -> None:
+def test_sqrtx_rand(
+    run_count: int,
+    x_rand: Callable[[], int],  # pylint: disable=redefined-outer-name
+) -> None:
     """Tests solution for problem Sqrt(x) with random x"""
 
     random.seed(run_count)
